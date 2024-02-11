@@ -10,73 +10,107 @@
 
 <body>
   <header class="header">
-    <div class="container">
-      <div class="head">
-        <img class="logo" src="./src/img/logo.svg" alt="lir logo">
+    <div class="header__bg"></div>
+    <div class="header__bg-femida"></div>
 
-        <nav class="navigation">
-          <ul class="nav__list">
-            <li class="nav__item">Главная</li>
-            <li class="nav__item">Услуги</li>
-            <li class="nav__item">Сопровождение</li>
-            <li class="nav__item">Полезное</li>
-            <li class="nav__item">О компании</li>
-            <li class="nav__item">Контакты</li>
+    <div class="head">
+      <div class="container items-center content-between">
+        <div class="flex">
+          <img class="logo" width="36" height="23" src="./src/img/logo-lir.svg" alt="lir logo">
+        </div>
+
+        <nav class="nav">
+          <ul class="nav__list items-center">
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                Главная
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                Услуги
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                Сопровождение
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                Полезное
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                О компании
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                Контакты
+              </a>
+            </li>
           </ul>
         </nav>
 
-        <input class="telephone" type="tel" name="79998900998">
+        <button class="btn-tel btn-reset" type="button">
+          +7 (999) 890 09 98
+        </button>
       </div>
+    </div>
 
+    <div class="container">
 
       <div class="hero">
-        <h1 class="hero__title">
+        <h1 class="hero__title font-bold">
           Решим любой правовой вопрос
         </h1>
         <p class="hero__descr">
           Помощь в решении любого правового вопроса в вашу пользу
         </p>
 
-        <form class="consult__form">
-          <div class="font-bold">
+        <form class="consult">
+          <div class="font-bold consult__title">
             Нужна консультация?
           </div>
-          <input class="input-reset input-default" type="tel" name="tel">
+          <div class="flex">
+            <input class="input-default consult__input" type="tel" name="tel">
 
-          <button class="btn-default btn-reset" type="submit">
-            Заказать звонок
-          </button>
+            <button class="btn-default btn-reset font-bold consult__btn" type="submit">
+              Заказать звонок
+            </button>
+          </div>
         </form>
 
 
-        <div class="metrics">
-          <ul class="metrics__list">
-            <li class="metrics__item">
-              <span class="metrics__num">
-                89%
-              </span>
-              <span class="metrics__text">
-                Выигранных дел
-              </span>
-            </li>
-            <li class="metrics__item">
-              <span class="metrics__num">
-                34
-              </span>
-              <span class="metrics__text">
-                Сотрудника в штате
-              </span>
-            </li>
-            <li class="metrics__item">
-              <span class="metrics__num">
-                18
-              </span>
-              <span class="metrics__text">
-                Лет на рынке
-              </span>
-            </li>
-          </ul>
-        </div>
+        <ul class="flex">
+          <li class="header__item">
+            <span class="header__num">
+              89%
+            </span>
+            <span class="header__text">
+              Выигранных дел
+            </span>
+          </li>
+          <li class="header__item">
+            <span class="header__num">
+              34
+            </span>
+            <span class="header__text">
+              Сотрудника в штате
+            </span>
+          </li>
+          <li class="header__item">
+            <span class="header__num">
+              18
+            </span>
+            <span class="header__text">
+              Лет на рынке
+            </span>
+          </li>
+        </ul>
+
       </div>
     </div>
   </header>
@@ -452,7 +486,7 @@
       </p>
 
       <form class="news__form">
-        <input class="input-reset input-default" type="email" name="email">
+        <input class="input-default" type="email" name="email">
 
         <button class="btn-default btn-reset" type="submit">
           подписаться
@@ -502,7 +536,7 @@
 
           <form class="footer__form">
             <div class="font-bold">Нужна консультация?</div>
-            <input class="input-reset input-default" type="tel" name="tel">
+            <input class="input-default" type="tel" name="tel">
 
             <button class="btn-default btn-reset" type="submit">
               подписаться
