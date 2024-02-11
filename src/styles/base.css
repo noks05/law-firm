@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'Optima';
+  src: url('fonts/Optima.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MontserratLightItalic';
+  src: url('fonts/MontserratLightItalic.woff2') format('woff2');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MontserratLight';
+  src: url('fonts/MontserratLight.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --gray: #B1B1B1;
+  --gray-light: #D9D9D9;
+  --gray-lighter: #F6F4F5;
+  --white: #fff;
+  --dark: #232228;
+  --yellow-light: #E3C37A;
+  --yellow-dark: #A4834E;
+
+  --container-width: 1300px;
+  --padding-x: 15px;
+  --input-height: 44px;
+  --border-yellow: 1px solid var(var(--yellow-light));
+
+  --font-size-h2: 25px;
+  --font-size-light: 11px;
+  --font-size-bold: 20px;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 17px;
+  color: var(--dark);
+}
