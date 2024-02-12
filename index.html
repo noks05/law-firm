@@ -307,69 +307,75 @@
 
     <section class="clients section">
       <div class="container">
-        <h2 class="section-title">
-          доверяют
+        <h2 class="section-title font-light clients__title">
+          нам доверяют
         </h2>
-        <h3 class="section-sub-title">
-          они выбрали нас
+        <h3 class="section-sub-title clients__sub-title">
+          они <span class="color-yellow-light">выбрали</span> нас
         </h3>
 
-        <ul class="clients__list">
+        <ul class="flex">
           <li class="clients__item">
-            <div class="clients__box">
+            <div class="clients__box items-center content-center">
               <figure class="clients__figure">
-                <img src="" alt="mini cooper" class="clients__img">
-                <figcaption class="clients__figcaption">
+                <div class="clients__img-wrap items-center content-center"><img src="./src/img/mini-cooper.svg "
+                    alt="mini cooper" class="clients__img"></div>
+                <figcaption class="clients__figcaption font-bold">
                   mini cooper
                 </figcaption>
               </figure>
             </div>
           </li>
           <li class="clients__item">
-            <div class="clients__box">
+            <div class="clients__box items-center content-center">
               <figure class="clients__figure">
-                <img src="" alt="сбер" class="clients__img">
-                <figcaption class="clients__figcaption">
+                <div class="clients__img-wrap items-center content-center"><img src="./src/img/sber.svg" alt="сбер"
+                    class="clients__img"></div>
+                <figcaption class="clients__figcaption font-bold">
                   сбер
                 </figcaption>
               </figure>
             </div>
           </li>
           <li class="clients__item">
-            <div class="clients__box">
+            <div class="clients__box items-center content-center">
               <figure class="clients__figure">
-                <img src="" alt="сколково" class="clients__img">
-                <figcaption class="clients__figcaption">
+                <div class="clients__img-wrap items-center content-center"><img src="./src/img/skolkovo.svg"
+                    alt="сколково" class="clients__img"></div>
+                <figcaption class="clients__figcaption font-bold">
                   сколково
                 </figcaption>
               </figure>
             </div>
           </li>
           <li class="clients__item">
-            <div class="clients__box">
+            <div class="clients__box items-center content-center">
               <figure class="clients__figure">
-                <img src="" alt="psychology" class="clients__img">
-                <figcaption class="clients__figcaption">
+                <div class="clients__img-wrap items-center content-center"><img src="./src/img/psyhology.svg"
+                    alt="psychology" class="clients__img"></div>
+                <figcaption class="clients__figcaption font-bold">
                   psychology
                 </figcaption>
               </figure>
             </div>
           </li>
           <li class="clients__item">
-            <div class="clients__box">
+            <div class="clients__box items-center content-center">
               <figure class="clients__figure">
-                <img src="" alt="Valorant" class="clients__img">
-                <figcaption class="clients__figcaption">
+                <div class="clients__img-wrap items-center content-center"><img src="./src/img/valorant.svg"
+                    alt="Valorant" class="clients__img"></div>
+                <figcaption class="clients__figcaption font-bold">
                   Valorant
                 </figcaption>
               </figure>
             </div>
           </li>
           <li class="clients__item">
-            <div class="clients__box">
+            <div class="clients__box items-center content-center">
               <figure class="clients__figure">
-                <img src="" alt="первый канал" class="clients__img">
-                <figcaption class="clients__figcaption">
+                <div class="clients__img-wrap items-center content-center"><img src="./src/img/first.svg"
+                    alt="первый канал" class="clients__img"></div>
+                <figcaption class="clients__figcaption font-bold">
                   первый канал
                 </figcaption>
               </figure>
@@ -382,42 +388,47 @@
 
     <section class="reviews section">
       <div class="container">
-        <h2 class="section-title">
-          доверяют
+        <h2 class="section-title font-light">
+          О нас говорят
         </h2>
-        <h3 class="section-sub-title">
-          они выбрали нас
+        <h3 class="section-sub-title reviews__sub-title">
+          <span class="color-yellow">Отзывы</span> наших клиентов
         </h3>
 
-        <div class="reviews__review">
-          <div class="reviews__decor"></div>
+        <div class="review">
+          <div class="review__decor"></div>
 
-          <img class="review__avatar" src="" alt="Аватар">
-          <p class="review__descr">
-            Я обеспечу представление Ваших интересов в судах общей юрисдикции, арбитраже, третейском суде, приму участие
-            в
-            переговорах, окажу помощь на стадии досудебного урегулирования споров.
-          </p>
-
-          <div class="review__name">
-            Юлия Воробьева
+          <div class="review__img-wrap flex">
+            <img class="review__avatar" src="./src/img/avatar.jpg" alt="Аватар">
           </div>
-          <span class="review__position">
-            Директор компании “Воробьева и ко”
-          </span>
+          <div class="review__texts flex-col items-center">
+            <p class="review__descr">
+              Я обеспечу представление Ваших интересов в судах общей юрисдикции, арбитраже, третейском суде, приму
+              участие
+              в
+              переговорах, окажу помощь на стадии досудебного урегулирования споров.
+            </p>
+
+            <div class="review__name font-bold">
+              Юлия Воробьева
+            </div>
+            <span class="review__position font-light">
+              Директор компании “Воробьева и ко”
+            </span>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="articles section">
-      <div class="content">
-        <div class="articles__top flex">
+      <div class="container">
+        <div class="articles__top items-center content-between">
           <div class="articles__top-text">
-            <h2 class="section-title-title section-title-line">
+            <h2 class="section-title section-title-line font-light">
               Наш блог
             </h2>
-            <h3 class="section-sub-title-title">
-              они выбрали нас
+            <h3 class="section-sub-title">
+              <span class="color-yellow">полезно</span> знать
             </h3>
           </div>
 
@@ -426,76 +437,84 @@
           </button>
         </div>
 
-        <ul class="articles__list">
+        <ul class="flex">
           <li class="articles__item">
-            <div class="articles__inner article">
-              <span class="article__date">
-                15 апреля
-              </span>
-              <h4 class="article__title">
-                Как использовать закон в свою пользу?
-              </h4>
-              <button class="btn-default btn-reset" type="button">
-                Читать
-              </button>
+            <div class="article article_bg1">
+              <div class="article__texts article__texts_1">
+                <span class="article__date font-light">
+                  15 апреля
+                </span>
+                <h4 class="article__title font-bold">
+                  Как использовать закон в свою пользу?
+                </h4>
+                <button class="btn-default btn-reset" type="button">
+                  Читать
+                </button>
+              </div>
             </div>
           </li>
           <li class="articles__item">
-            <div class="articles__inner article">
-              <span class="article__date">
-                09 апреля
-              </span>
-              <h4 class="article__title">
-                библиотека юристов. Что почитать?
-              </h4>
-              <button class="btn-default btn-reset" type="button">
-                Читать
-              </button>
+            <div class="article article_bg2">
+              <div class="article__texts">
+                <span class="article__date font-light">
+                  09 апреля
+                </span>
+                <h4 class="article__title font-bold">
+                  библиотека юристов. Что почитать?
+                </h4>
+                <button class="btn-default btn-reset" type="button">
+                  Читать
+                </button>
+              </div>
             </div>
           </li>
           <li class="articles__item">
-            <div class="articles__inner article">
-              <span class="article__date">
-                06 марта
-              </span>
-              <h4 class="article__title">
-                на что обратить внимание в документах?
-              </h4>
-              <button class="btn-default btn-reset" type="button">
-                Читать
-              </button>
+            <div class="article article_bg3">
+              <div class="article__texts">
+                <span class="article__date font-light">
+                  06 марта
+                </span>
+                <h4 class="article__title font-bold">
+                  на что обратить внимание в документах?
+                </h4>
+                <button class="btn-default btn-reset" type="button">
+                  Читать
+                </button>
+              </div>
             </div>
           </li>
           <li class="articles__item">
-            <div class="articles__inner article">
-              <span class="article__date">
-                23 февраля
-              </span>
-              <h4 class="article__title">
-                залог успешных дел наших юристов
-              </h4>
-              <button class="btn-default btn-reset" type="button">
-                Читать
-              </button>
+            <div class="article article_bg4">
+              <div class="article__texts">
+                <span class="article__date font-light">
+                  23 февраля
+                </span>
+                <h4 class="article__title font-bold">
+                  залог успешных дел наших юристов
+                </h4>
+                <button class="btn-default btn-reset" type="button">
+                  Читать
+                </button>
+              </div>
             </div>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="news section">
-      <h2 class="section-title-title">
+    <section class="news section flex-col items-center">
+      <h2 class="section-title font-light">
         Будьте в курсе
       </h2>
-      <h3 class="section-sub-title-title">
-        подпишитесь на наши новости
+      <h3 class="section-sub-title news__sub-title">
+        <span class="color-yellow">подпишитесь</span> на наши новости
       </h3>
-      <p class="news__descr">
+      <p class="news__descr text-descr">
         Чтобы всегда быть в курсе дел и обновлении законов.
       </p>
 
-      <form class="news__form">
-        <input class="input-default" type="email" name="email">
+      <form class="news__form flex">
+        <input class="input-default news__input" type="email" name="email" placeholder="Ваш e-mail">
 
         <button class="btn-default btn-reset" type="submit">
           подписаться
@@ -504,56 +523,70 @@
 
     </section>
 
-    <footer class="footer">
-      <div class="footer__top">
-        <div class="footer__contacts">
-          <h2 class="section-title-title section-title-line">
+
+    <section class="contacts flex">
+      <div class="contacts__left">Cart</div>
+
+      <div class="contacts__right">
+        <div class="contacts__inner">
+          <h2 class="section-title section-title-line font-light">
             На связи с нами
           </h2>
-          <h3 class="section-sub-title-title">
-            Контактная информация
+
+          <h3 class="section-sub-title contacts__sub-title">
+            <span class="color-yellow-light">Контактная</span> информация
           </h3>
 
-          <address class="footer__address">
-            <ul class="footer__list">
-              <li class="footer__item">
-                <span class="footer__type">
+          <address class="contacts__address">
+            <ul class="contacts__list">
+              <li class="contacts__item flex">
+                <span class="contacts__type font-bold">
                   телефон
                 </span>
-                <span class="footer__value">
+                <span class="contacts__value  font-bold">
                   +7 (999) 890 09 98
                 </span>
               </li>
-              <li class="footer__item">
-                <span class="footer__type">
+              <li class="contacts__item flex">
+                <span class="contacts__type font-bold">
                   адрес
                 </span>
-                <span class="footer__value">
+                <span class="contacts__value  font-bold">
                   Москва, ул. Арбат, д. 1
                 </span>
               </li>
-              <li class="footer__item">
-                <span class="footer__type">
+              <li class="contacts__item flex">
+                <span class="contacts__type font-bold">
                   почта
                 </span>
-                <span class="footer__value">
+                <span class="contacts__value  font-bold">
                   info@ya.ru
                 </span>
               </li>
             </ul>
           </address>
 
-          <form class="footer__form">
-            <div class="font-bold">Нужна консультация?</div>
-            <input class="input-default" type="tel" name="tel">
+          <form class="consult contacts__consult">
+            <div class="font-bold consult__title">
+              Нужна консультация?
+            </div>
+            <div class="flex">
+              <input class="input-default consult__input" type="tel" name="tel">
 
-            <button class="btn-default btn-reset" type="submit">
-              подписаться
-            </button>
+              <button class="btn-default btn-reset font-bold consult__btn" type="submit">
+                Заказать звонок
+              </button>
+            </div>
           </form>
-
         </div>
+
       </div>
+
+    </section>
+
+
+    <footer class="footer">
+
 
       <span class="footer__bottom">
         © Все права защищены 2023

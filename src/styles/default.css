@@ -1,0 +1,143 @@
+/* default  */
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.items-center {
+  display: flex;
+  align-items: center;
+}
+
+.content-center {
+  display: flex;
+  justify-content: center;
+}
+
+.content-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.items-end {
+  display: flex;
+  align-items: flex-end;
+}
+
+.content-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.section {
+  padding-block: 80px;
+  overflow: hidden;
+}
+
+.container {
+  max-width: calc(var(--container-width) + var(--padding-x)*2);
+  padding-inline: var(--padding-x);
+  margin-inline: auto;
+}
+
+.section-title-line {
+  position: relative;
+  padding-left: 55px;
+}
+
+.section-title-line::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 44px;
+  height: 0.5px;
+  background-color: var(--grey);
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.section-title {
+  margin-bottom: 32px;
+}
+
+.section-sub-title {
+  font-family: 'Optima';
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 52px;
+  text-transform: uppercase;
+  color: var(--dark);
+}
+
+.text-descr {
+  color: var(--dark);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.font-light {
+  font-family: 'Montserrat';
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 17px;
+  color: var(--grey);
+}
+
+.font-bold {
+  font-family: 'Optima';
+  color: var(--dark);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.input-default {
+  width: 100%;
+  height: var(--input-height);
+  padding: 12px;
+  border: none;
+  background-color: #fff;
+}
+
+.btn-reset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn-default {
+  padding: 12px 24px;
+  border: var(--border-yellow);
+  font-family: 'Optima';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.btn-tel {
+  line-height: 18px;
+  color: var(--yellow-light);
+}
+
+.color-yellow {
+  color: var(--yellow-dark);
+}
+
+.color-yellow-light {
+  color: var(--yellow-light);
+}
