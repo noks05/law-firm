@@ -5,568 +5,104 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./src/styles/main.css">
+  <script src="//api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU"
+    type="text/javascript"></script>
+  <script>
+    ymaps.ready(function () {
+      const map = new ymaps.Map('map', {
+        center: [55.752017, 37.606283],
+        zoom: 14,
+        type: 'yandex#map',
+        controls: []
+      });
+
+      const mark = new ymaps.Placemark(
+        [55.751817, 37.599292],
+        {
+          hintContent: 'Москва, ул. Арбат, д. 1',
+        },
+        {
+          iconLayout: 'default#image',
+          iconImageHref: './src/img/point-map.svg',
+          iconImageSize: [33, 44],
+          iconImageOffset: [-10, -20]
+        }
+      )
+      map.geoObjects.add(mark);
+
+      const mapEl = document.getElementById('map')
+      mapEl.style.height = 'auto'
+      mapEl.style.width = 'auto'
+      mapEl.firstElementChild.style.height = '100%'
+      mapEl.firstElementChild.style.width = '100%'
+    });
+  </script>
   <title>Юридическая фирма</title>
 </head>
 
 <body>
-  <header class="header">
-    <div class="header__bg"></div>
-    <div class="header__bg-femida"></div>
+  <div class="main-wrapper">
 
-    <div class="head">
-      <div class="container items-center content-between">
-        <div class="flex">
-          <img class="logo" width="36" height="23" src="./src/img/logo-lir.svg" alt="lir logo">
-        </div>
+    <header class="header">
+      <div class="header__bg"></div>
+      <div class="header__bg-femida"></div>
 
-        <nav class="nav">
-          <ul class="nav__list items-center">
-            <li class="nav__item">
-              <a class="nav__link" href="#">
-                Главная
-              </a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">
-                Услуги
-              </a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">
-                Сопровождение
-              </a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">
-                Полезное
-              </a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">
-                О компании
-              </a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">
-                Контакты
-              </a>
-            </li>
-          </ul>
-        </nav>
-
-        <button class="btn-tel btn-reset" type="button">
-          +7 (999) 890 09 98
-        </button>
-      </div>
-    </div>
-
-    <div class="container">
-
-      <div class="hero">
-        <h1 class="hero__title font-bold">
-          Решим любой правовой вопрос
-        </h1>
-        <p class="hero__descr">
-          Помощь в решении любого правового вопроса в вашу пользу
-        </p>
-
-        <form class="consult">
-          <div class="font-bold consult__title">
-            Нужна консультация?
-          </div>
+      <div class="head">
+        <div class="container items-center content-between">
           <div class="flex">
-            <input class="input-default consult__input" type="tel" name="tel">
-
-            <button class="btn-default btn-reset font-bold consult__btn" type="submit">
-              Заказать звонок
-            </button>
-          </div>
-        </form>
-
-
-        <ul class="flex">
-          <li class="header__item">
-            <span class="header__num">
-              89%
-            </span>
-            <span class="header__text">
-              Выигранных дел
-            </span>
-          </li>
-          <li class="header__item">
-            <span class="header__num">
-              34
-            </span>
-            <span class="header__text">
-              Сотрудника в штате
-            </span>
-          </li>
-          <li class="header__item">
-            <span class="header__num">
-              18
-            </span>
-            <span class="header__text">
-              Лет на рынке
-            </span>
-          </li>
-        </ul>
-
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="section owner content-end">
-
-      <div class="owner__box">
-        <h2 class="section-title section-title-line font-light">
-          Слово руководителя
-        </h2>
-
-        <div class="owner__quote">
-          <h3 class="section-sub-title owner__sub-title">
-            <div>Потому что нам </div>
-            <span class="color-yellow">не все равно</span>
-          </h3>
-          <p class="text-descr owner__descr">
-            Я обеспечу представление Ваших интересов в судах общей юрисдикции, арбитраже, третейском суде, приму участие
-            в
-            переговорах, окажу помощь на стадии досудебного урегулирования споров.
-          </p>
-        </div>
-
-        <div class="font-bold owner__name">
-          Жемчужин Василий Яковлевич
-        </div>
-        <span class="font-light">
-          Генеральный директор
-        </span>
-      </div>
-
-      <div class="owner__owner-img flex">
-        <img width="587" height="387" src="./src/img/owner.png" alt="owner">
-      </div>
-      <div class="owner__bg-color"></div>
-      <div class="owner__bg-img"></div>
-    </section>
-
-
-    <section class="section why-us">
-      <div class="container">
-        <h2 class="section-title font-light">
-          Наши преимущества
-        </h2>
-        <h3 class="section-sub-title why-us__sub-title">
-          Почему <span class="color-yellow">выбирают</span> нас
-        </h3>
-
-        <ul class="why-us__list flex">
-          <li class="why-us__item flex">
-            <div class="box">
-              <span class="box__img box__img_1 flex"></span>
-
-              <h4 class="box__title font-bold">
-                круглосуточная поддержка
-              </h4>
-              <p class="text-descr">
-                Звонки по любым вопросам в удобное для вас время. Мы всегда рядом
-              </p>
-
-            </div>
-          </li>
-          <li class="why-us__item flex">
-            <div class="box">
-              <span class="box__img box__img_2 flex"></span>
-
-              <h4 class="box__title font-bold">
-                Высокая экспертность
-              </h4>
-              <p class="text-descr">
-                Наши специалисты постоянно улучшают свои навыки и изучают новые подходы
-              </p>
-
-            </div>
-          </li>
-          <li class="why-us__item flex">
-            <div class="box">
-              <span class="box__img box__img_3 flex"></span>
-
-              <h4 class="box__title font-bold">
-                думаем на два шага вперед
-              </h4>
-              <p class="text-descr">
-                Звонки по любым вопросам в удобное для вас время. Мы всегда рядом
-              </p>
-
-            </div>
-          </li>
-          <li class="why-us__item flex">
-            <div class="box">
-              <span class="box__img box__img_4 flex"></span>
-
-              <h4 class="box__title font-bold">
-                Знания – наша сила
-              </h4>
-              <p class="text-descr">
-                Звонки по любым вопросам в удобное для вас время. Мы всегда рядом
-              </p>
-
-            </div>
-          </li>
-        </ul>
-
-        <button class="btn-default btn-reset" type="button">
-          Заказать звонок
-        </button>
-      </div>
-    </section>
-
-
-    <section class="specialists section">
-      <div class="container flex">
-        <div class="specialists__left">
-          <h2 class="section-title section-title-line font-light specialists__title">
-            Наша команда
-          </h2>
-          <h3 class="section-sub-title specialists__sub-title">
-            Наши специалисты знают свое дело
-          </h3>
-
-          <p class="specialists__descr text-descr">
-            Я обеспечу представление Ваших интересов в судах общей юрисдикции, арбитраже, третейском суде, приму участие
-            в
-            переговорах.
-          </p>
-
-          <button class="request-call btn-reset btn-default" type="button">
-            Заказать звонок
-          </button>
-        </div>
-
-        <div class="specialists__right">
-          <ul class="specialists__list flex">
-            <li class="specialists__item">
-              <div class="specialists__box">
-                <div class="specialists__img items-end">
-                  <img src="./src/img/user1.png" alt="КИРИЛЛ АЛЕКСАНДРОВич">
-                </div>
-                <span class="specialists__text">
-                  <span class="specialists__name font-bold">
-                    КИРИЛЛ АЛЕКСАНДРОВич
-                  </span>
-                  <span class="specialists__exp font-light">
-                    27 лет стажа
-                  </span>
-                </span>
-              </div>
-            </li>
-            <li class="specialists__item">
-              <div class="specialists__box">
-                <div class="specialists__img items-end"><img src="./src/img/user2.png" alt=" Любовь Юрьевна"></div>
-                <span class="specialists__text">
-                  <span class="specialists__name font-bold">
-                    Любовь Юрьевна
-                  </span>
-                  <span class="specialists__exp font-light">
-                    17 лет стажа
-                  </span>
-                </span>
-              </div>
-            </li>
-            <li class="specialists__item">
-              <div class="specialists__box">
-                <div class="specialists__img items-end"><img src="./src/img/user3.png" alt="Иван васильевич"></div>
-                <span class="specialists__text">
-                  <span class="specialists__name font-bold">
-                    Иван васильевич
-                  </span>
-                  <span class="specialists__exp font-light">
-                    17 лет стажа
-                  </span>
-                </span>
-              </div>
-            </li>
-            <li class="specialists__item">
-              <div class="specialists__box">
-                <div class="specialists__img items-end"><img src="./src/img/user2.png" alt="АННА ДМИТРИЕВНА"></div>
-                <span class="specialists__text">
-                  <span class="specialists__name font-bold">
-                    АННА ДМИТРИЕВНА
-                  </span>
-                  <span class="specialists__exp font-light">
-                    12 лет стажа
-                  </span>
-                </span>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="clients section">
-      <div class="container">
-        <h2 class="section-title font-light clients__title">
-          нам доверяют
-        </h2>
-        <h3 class="section-sub-title clients__sub-title">
-          они <span class="color-yellow-light">выбрали</span> нас
-        </h3>
-
-        <ul class="flex">
-          <li class="clients__item">
-            <div class="clients__box items-center content-center">
-              <figure class="clients__figure">
-                <div class="clients__img-wrap items-center content-center"><img src="./src/img/mini-cooper.svg "
-                    alt="mini cooper" class="clients__img"></div>
-                <figcaption class="clients__figcaption font-bold">
-                  mini cooper
-                </figcaption>
-              </figure>
-            </div>
-          </li>
-          <li class="clients__item">
-            <div class="clients__box items-center content-center">
-              <figure class="clients__figure">
-                <div class="clients__img-wrap items-center content-center"><img src="./src/img/sber.svg" alt="сбер"
-                    class="clients__img"></div>
-                <figcaption class="clients__figcaption font-bold">
-                  сбер
-                </figcaption>
-              </figure>
-            </div>
-          </li>
-          <li class="clients__item">
-            <div class="clients__box items-center content-center">
-              <figure class="clients__figure">
-                <div class="clients__img-wrap items-center content-center"><img src="./src/img/skolkovo.svg"
-                    alt="сколково" class="clients__img"></div>
-                <figcaption class="clients__figcaption font-bold">
-                  сколково
-                </figcaption>
-              </figure>
-            </div>
-          </li>
-          <li class="clients__item">
-            <div class="clients__box items-center content-center">
-              <figure class="clients__figure">
-                <div class="clients__img-wrap items-center content-center"><img src="./src/img/psyhology.svg"
-                    alt="psychology" class="clients__img"></div>
-                <figcaption class="clients__figcaption font-bold">
-                  psychology
-                </figcaption>
-              </figure>
-            </div>
-          </li>
-          <li class="clients__item">
-            <div class="clients__box items-center content-center">
-              <figure class="clients__figure">
-                <div class="clients__img-wrap items-center content-center"><img src="./src/img/valorant.svg"
-                    alt="Valorant" class="clients__img"></div>
-                <figcaption class="clients__figcaption font-bold">
-                  Valorant
-                </figcaption>
-              </figure>
-            </div>
-          </li>
-          <li class="clients__item">
-            <div class="clients__box items-center content-center">
-              <figure class="clients__figure">
-                <div class="clients__img-wrap items-center content-center"><img src="./src/img/first.svg"
-                    alt="первый канал" class="clients__img"></div>
-                <figcaption class="clients__figcaption font-bold">
-                  первый канал
-                </figcaption>
-              </figure>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-
-    <section class="reviews section">
-      <div class="container">
-        <h2 class="section-title font-light">
-          О нас говорят
-        </h2>
-        <h3 class="section-sub-title reviews__sub-title">
-          <span class="color-yellow">Отзывы</span> наших клиентов
-        </h3>
-
-        <div class="review">
-          <div class="review__decor"></div>
-
-          <div class="review__img-wrap flex">
-            <img class="review__avatar" src="./src/img/avatar.jpg" alt="Аватар">
-          </div>
-          <div class="review__texts flex-col items-center">
-            <p class="review__descr">
-              Я обеспечу представление Ваших интересов в судах общей юрисдикции, арбитраже, третейском суде, приму
-              участие
-              в
-              переговорах, окажу помощь на стадии досудебного урегулирования споров.
-            </p>
-
-            <div class="review__name font-bold">
-              Юлия Воробьева
-            </div>
-            <span class="review__position font-light">
-              Директор компании “Воробьева и ко”
-            </span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="articles section">
-      <div class="container">
-        <div class="articles__top items-center content-between">
-          <div class="articles__top-text">
-            <h2 class="section-title section-title-line font-light">
-              Наш блог
-            </h2>
-            <h3 class="section-sub-title">
-              <span class="color-yellow">полезно</span> знать
-            </h3>
+            <img class="logo" width="36" height="23" src="./src/img/logo-lir.svg" alt="lir logo">
           </div>
 
-          <button class="btn-default btn-reset" type="button">
-            Читать больше
-          </button>
-        </div>
-
-        <ul class="flex">
-          <li class="articles__item">
-            <div class="article article_bg1">
-              <div class="article__texts article__texts_1">
-                <span class="article__date font-light">
-                  15 апреля
-                </span>
-                <h4 class="article__title font-bold">
-                  Как использовать закон в свою пользу?
-                </h4>
-                <button class="btn-default btn-reset" type="button">
-                  Читать
-                </button>
-              </div>
-            </div>
-          </li>
-          <li class="articles__item">
-            <div class="article article_bg2">
-              <div class="article__texts">
-                <span class="article__date font-light">
-                  09 апреля
-                </span>
-                <h4 class="article__title font-bold">
-                  библиотека юристов. Что почитать?
-                </h4>
-                <button class="btn-default btn-reset" type="button">
-                  Читать
-                </button>
-              </div>
-            </div>
-          </li>
-          <li class="articles__item">
-            <div class="article article_bg3">
-              <div class="article__texts">
-                <span class="article__date font-light">
-                  06 марта
-                </span>
-                <h4 class="article__title font-bold">
-                  на что обратить внимание в документах?
-                </h4>
-                <button class="btn-default btn-reset" type="button">
-                  Читать
-                </button>
-              </div>
-            </div>
-          </li>
-          <li class="articles__item">
-            <div class="article article_bg4">
-              <div class="article__texts">
-                <span class="article__date font-light">
-                  23 февраля
-                </span>
-                <h4 class="article__title font-bold">
-                  залог успешных дел наших юристов
-                </h4>
-                <button class="btn-default btn-reset" type="button">
-                  Читать
-                </button>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="news section flex-col items-center">
-      <h2 class="section-title font-light">
-        Будьте в курсе
-      </h2>
-      <h3 class="section-sub-title news__sub-title">
-        <span class="color-yellow">подпишитесь</span> на наши новости
-      </h3>
-      <p class="news__descr text-descr">
-        Чтобы всегда быть в курсе дел и обновлении законов.
-      </p>
-
-      <form class="news__form flex">
-        <input class="input-default news__input" type="email" name="email" placeholder="Ваш e-mail">
-
-        <button class="btn-default btn-reset" type="submit">
-          подписаться
-        </button>
-      </form>
-
-    </section>
-
-
-    <section class="contacts flex">
-      <div class="contacts__left">Cart</div>
-
-      <div class="contacts__right">
-        <div class="contacts__inner">
-          <h2 class="section-title section-title-line font-light">
-            На связи с нами
-          </h2>
-
-          <h3 class="section-sub-title contacts__sub-title">
-            <span class="color-yellow-light">Контактная</span> информация
-          </h3>
-
-          <address class="contacts__address">
-            <ul class="contacts__list">
-              <li class="contacts__item flex">
-                <span class="contacts__type font-bold">
-                  телефон
-                </span>
-                <span class="contacts__value  font-bold">
-                  +7 (999) 890 09 98
-                </span>
+          <nav class="nav">
+            <ul class="nav__list items-center">
+              <li class="nav__item">
+                <a class="nav__link" href="#">
+                  Главная
+                </a>
               </li>
-              <li class="contacts__item flex">
-                <span class="contacts__type font-bold">
-                  адрес
-                </span>
-                <span class="contacts__value  font-bold">
-                  Москва, ул. Арбат, д. 1
-                </span>
+              <li class="nav__item">
+                <a class="nav__link" href="#">
+                  Услуги
+                </a>
               </li>
-              <li class="contacts__item flex">
-                <span class="contacts__type font-bold">
-                  почта
-                </span>
-                <span class="contacts__value  font-bold">
-                  info@ya.ru
-                </span>
+              <li class="nav__item">
+                <a class="nav__link" href="#">
+                  Сопровождение
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">
+                  Полезное
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">
+                  О компании
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">
+                  Контакты
+                </a>
               </li>
             </ul>
-          </address>
+          </nav>
 
-          <form class="consult contacts__consult">
+          <a class="color-yellow-light" href="tel:79998900998">+7 (999) 890 09 98</a>
+        </div>
+      </div>
+
+      <div class="container">
+
+        <div class="hero">
+          <h1 class="hero__title font-bold">
+            Решим любой правовой вопрос
+          </h1>
+          <p class="hero__descr">
+            Помощь в решении любого правового вопроса в вашу пользу
+          </p>
+
+          <form class="consult">
             <div class="font-bold consult__title">
               Нужна консультация?
             </div>
@@ -578,12 +114,512 @@
               </button>
             </div>
           </form>
+
+
+          <ul class="flex">
+            <li class="header__item">
+              <span class="header__num">
+                89%
+              </span>
+              <span class="header__text">
+                Выигранных дел
+              </span>
+            </li>
+            <li class="header__item">
+              <span class="header__num">
+                34
+              </span>
+              <span class="header__text">
+                Сотрудника в штате
+              </span>
+            </li>
+            <li class="header__item">
+              <span class="header__num">
+                18
+              </span>
+              <span class="header__text">
+                Лет на рынке
+              </span>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section owner content-end">
+
+        <div class="owner__box">
+          <h2 class="section-title section-title-line font-light">
+            Слово руководителя
+          </h2>
+
+          <div class="owner__quote">
+            <h3 class="section-sub-title owner__sub-title">
+              <div>Потому что нам </div>
+              <span class="color-yellow">не все равно</span>
+            </h3>
+            <p class="text-descr owner__descr">
+              Я обеспечу представление Ваших интересов в судах общей юрисдикции, арбитраже, третейском суде, приму
+              участие
+              в
+              переговорах, окажу помощь на стадии досудебного урегулирования споров.
+            </p>
+          </div>
+
+          <div class="font-bold owner__name">
+            Жемчужин Василий Яковлевич
+          </div>
+          <span class="font-light">
+            Генеральный директор
+          </span>
         </div>
 
-      </div>
+        <div class="owner__owner-img flex">
+          <img width="587" height="387" src="./src/img/owner.png" alt="owner">
+        </div>
+        <div class="owner__bg-color"></div>
+        <div class="owner__bg-img"></div>
+      </section>
 
-    </section>
 
+      <section class="section why-us">
+        <div class="container">
+          <h2 class="section-title font-light">
+            Наши преимущества
+          </h2>
+          <h3 class="section-sub-title why-us__sub-title">
+            Почему <span class="color-yellow">выбирают</span> нас
+          </h3>
+
+          <ul class="why-us__list flex">
+            <li class="why-us__item flex">
+              <div class="box">
+                <span class="box__img box__img_1 flex"></span>
+
+                <h4 class="box__title font-bold">
+                  круглосуточная поддержка
+                </h4>
+                <p class="text-descr">
+                  Звонки по любым вопросам в удобное для вас время. Мы всегда рядом
+                </p>
+
+              </div>
+            </li>
+            <li class="why-us__item flex">
+              <div class="box">
+                <span class="box__img box__img_2 flex"></span>
+
+                <h4 class="box__title font-bold">
+                  Высокая экспертность
+                </h4>
+                <p class="text-descr">
+                  Наши специалисты постоянно улучшают свои навыки и изучают новые подходы
+                </p>
+
+              </div>
+            </li>
+            <li class="why-us__item flex">
+              <div class="box">
+                <span class="box__img box__img_3 flex"></span>
+
+                <h4 class="box__title font-bold">
+                  думаем на два шага вперед
+                </h4>
+                <p class="text-descr">
+                  Звонки по любым вопросам в удобное для вас время. Мы всегда рядом
+                </p>
+
+              </div>
+            </li>
+            <li class="why-us__item flex">
+              <div class="box">
+                <span class="box__img box__img_4 flex"></span>
+
+                <h4 class="box__title font-bold">
+                  Знания – наша сила
+                </h4>
+                <p class="text-descr">
+                  Звонки по любым вопросам в удобное для вас время. Мы всегда рядом
+                </p>
+
+              </div>
+            </li>
+          </ul>
+
+          <button class="btn-default btn-reset" type="button">
+            Заказать звонок
+          </button>
+        </div>
+      </section>
+
+
+      <section class="specialists section">
+        <div class="container flex">
+          <div class="specialists__left">
+            <h2 class="section-title section-title-line font-light specialists__title">
+              Наша команда
+            </h2>
+            <h3 class="section-sub-title specialists__sub-title">
+              Наши специалисты знают свое дело
+            </h3>
+
+            <p class="specialists__descr text-descr">
+              Я обеспечу представление Ваших интересов в судах общей юрисдикции, арбитраже, третейском суде, приму
+              участие
+              в
+              переговорах.
+            </p>
+
+            <button class="request-call btn-reset btn-default" type="button">
+              Заказать звонок
+            </button>
+          </div>
+
+          <div class="specialists__right">
+            <ul class="specialists__list flex">
+              <li class="specialists__item">
+                <div class="specialists__box">
+                  <div class="specialists__img items-end">
+                    <img src="./src/img/user1.png" alt="КИРИЛЛ АЛЕКСАНДРОВич">
+                  </div>
+                  <span class="specialists__text">
+                    <span class="specialists__name font-bold">
+                      КИРИЛЛ АЛЕКСАНДРОВич
+                    </span>
+                    <span class="specialists__exp font-light">
+                      27 лет стажа
+                    </span>
+                  </span>
+                </div>
+              </li>
+              <li class="specialists__item">
+                <div class="specialists__box">
+                  <div class="specialists__img items-end"><img src="./src/img/user2.png" alt=" Любовь Юрьевна"></div>
+                  <span class="specialists__text">
+                    <span class="specialists__name font-bold">
+                      Любовь Юрьевна
+                    </span>
+                    <span class="specialists__exp font-light">
+                      17 лет стажа
+                    </span>
+                  </span>
+                </div>
+              </li>
+              <li class="specialists__item">
+                <div class="specialists__box">
+                  <div class="specialists__img items-end"><img src="./src/img/user3.png" alt="Иван васильевич"></div>
+                  <span class="specialists__text">
+                    <span class="specialists__name font-bold">
+                      Иван васильевич
+                    </span>
+                    <span class="specialists__exp font-light">
+                      17 лет стажа
+                    </span>
+                  </span>
+                </div>
+              </li>
+              <li class="specialists__item">
+                <div class="specialists__box">
+                  <div class="specialists__img items-end"><img src="./src/img/user2.png" alt="АННА ДМИТРИЕВНА"></div>
+                  <span class="specialists__text">
+                    <span class="specialists__name font-bold">
+                      АННА ДМИТРИЕВНА
+                    </span>
+                    <span class="specialists__exp font-light">
+                      12 лет стажа
+                    </span>
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="clients section">
+        <div class="container">
+          <h2 class="section-title font-light clients__title">
+            нам доверяют
+          </h2>
+          <h3 class="section-sub-title clients__sub-title">
+            они <span class="color-yellow-light">выбрали</span> нас
+          </h3>
+
+          <ul class="flex">
+            <li class="clients__item">
+              <div class="clients__box items-center content-center">
+                <figure class="clients__figure">
+                  <div class="clients__img-wrap items-center content-center"><img src="./src/img/mini-cooper.svg "
+                      alt="mini cooper" class="clients__img"></div>
+                  <figcaption class="clients__figcaption font-bold">
+                    mini cooper
+                  </figcaption>
+                </figure>
+              </div>
+            </li>
+            <li class="clients__item">
+              <div class="clients__box items-center content-center">
+                <figure class="clients__figure">
+                  <div class="clients__img-wrap items-center content-center"><img src="./src/img/sber.svg" alt="сбер"
+                      class="clients__img"></div>
+                  <figcaption class="clients__figcaption font-bold">
+                    сбер
+                  </figcaption>
+                </figure>
+              </div>
+            </li>
+            <li class="clients__item">
+              <div class="clients__box items-center content-center">
+                <figure class="clients__figure">
+                  <div class="clients__img-wrap items-center content-center"><img src="./src/img/skolkovo.svg"
+                      alt="сколково" class="clients__img"></div>
+                  <figcaption class="clients__figcaption font-bold">
+                    сколково
+                  </figcaption>
+                </figure>
+              </div>
+            </li>
+            <li class="clients__item">
+              <div class="clients__box items-center content-center">
+                <figure class="clients__figure">
+                  <div class="clients__img-wrap items-center content-center"><img src="./src/img/psyhology.svg"
+                      alt="psychology" class="clients__img"></div>
+                  <figcaption class="clients__figcaption font-bold">
+                    psychology
+                  </figcaption>
+                </figure>
+              </div>
+            </li>
+            <li class="clients__item">
+              <div class="clients__box items-center content-center">
+                <figure class="clients__figure">
+                  <div class="clients__img-wrap items-center content-center"><img src="./src/img/valorant.svg"
+                      alt="Valorant" class="clients__img"></div>
+                  <figcaption class="clients__figcaption font-bold">
+                    Valorant
+                  </figcaption>
+                </figure>
+              </div>
+            </li>
+            <li class="clients__item">
+              <div class="clients__box items-center content-center">
+                <figure class="clients__figure">
+                  <div class="clients__img-wrap items-center content-center"><img src="./src/img/first.svg"
+                      alt="первый канал" class="clients__img"></div>
+                  <figcaption class="clients__figcaption font-bold">
+                    первый канал
+                  </figcaption>
+                </figure>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+      <section class="reviews section">
+        <div class="container">
+          <h2 class="section-title font-light">
+            О нас говорят
+          </h2>
+          <h3 class="section-sub-title reviews__sub-title">
+            <span class="color-yellow">Отзывы</span> наших клиентов
+          </h3>
+
+          <div class="review">
+            <div class="review__decor"></div>
+
+            <div class="review__img-wrap flex">
+              <img class="review__avatar" src="./src/img/avatar.jpg" alt="Аватар">
+            </div>
+            <div class="review__texts flex-col items-center">
+              <p class="review__descr">
+                Я обеспечу представление Ваших интересов в судах общей юрисдикции, арбитраже, третейском суде, приму
+                участие
+                в
+                переговорах, окажу помощь на стадии досудебного урегулирования споров.
+              </p>
+
+              <div class="review__name font-bold">
+                Юлия Воробьева
+              </div>
+              <span class="review__position font-light">
+                Директор компании “Воробьева и ко”
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="articles section">
+        <div class="container">
+          <div class="articles__top items-center content-between">
+            <div class="articles__top-text">
+              <h2 class="section-title section-title-line font-light">
+                Наш блог
+              </h2>
+              <h3 class="section-sub-title">
+                <span class="color-yellow">полезно</span> знать
+              </h3>
+            </div>
+
+            <button class="btn-default btn-reset" type="button">
+              Читать больше
+            </button>
+          </div>
+
+          <ul class="flex">
+            <li class="articles__item">
+              <div class="article article_bg1">
+                <div class="article__texts article__texts_1">
+                  <span class="article__date font-light">
+                    15 апреля
+                  </span>
+                  <h4 class="article__title font-bold">
+                    Как использовать закон в свою пользу?
+                  </h4>
+                  <button class="btn-default btn-reset" type="button">
+                    Читать
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="articles__item">
+              <div class="article article_bg2">
+                <div class="article__texts">
+                  <span class="article__date font-light">
+                    09 апреля
+                  </span>
+                  <h4 class="article__title font-bold">
+                    библиотека юристов. Что почитать?
+                  </h4>
+                  <button class="btn-default btn-reset" type="button">
+                    Читать
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="articles__item">
+              <div class="article article_bg3">
+                <div class="article__texts">
+                  <span class="article__date font-light">
+                    06 марта
+                  </span>
+                  <h4 class="article__title font-bold">
+                    на что обратить внимание в документах?
+                  </h4>
+                  <button class="btn-default btn-reset" type="button">
+                    Читать
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="articles__item">
+              <div class="article article_bg4">
+                <div class="article__texts">
+                  <span class="article__date font-light">
+                    23 февраля
+                  </span>
+                  <h4 class="article__title font-bold">
+                    залог успешных дел наших юристов
+                  </h4>
+                  <button class="btn-default btn-reset" type="button">
+                    Читать
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="news section flex-col items-center">
+        <h2 class="section-title font-light">
+          Будьте в курсе
+        </h2>
+        <h3 class="section-sub-title news__sub-title">
+          <span class="color-yellow">подпишитесь</span> на наши новости
+        </h3>
+        <p class="news__descr text-descr">
+          Чтобы всегда быть в курсе дел и обновлении законов.
+        </p>
+
+        <form class="news__form flex">
+          <input class="input-default news__input" type="email" name="email" placeholder="Ваш e-mail">
+
+          <button class="btn-default btn-reset" type="submit">
+            подписаться
+          </button>
+        </form>
+
+      </section>
+
+
+      <section class="contacts flex">
+        <div id="map" style="width: 600px; height: 400px; flex-grow:1;">
+        </div>
+
+        <div class=" contacts__right">
+          <div class="contacts__inner">
+            <h2 class="section-title section-title-line font-light">
+              На связи с нами
+            </h2>
+
+            <h3 class="section-sub-title contacts__sub-title">
+              <span class="color-yellow-light">Контактная</span> информация
+            </h3>
+
+            <address class="contacts__address">
+              <ul class="contacts__list">
+                <li class="contacts__item flex">
+                  <span class="contacts__type font-bold">
+                    телефон
+                  </span>
+                  <span class="contacts__value  font-bold">
+                    +7 (999) 890 09 98
+                  </span>
+                </li>
+                <li class="contacts__item flex">
+                  <span class="contacts__type font-bold">
+                    адрес
+                  </span>
+                  <span class="contacts__value  font-bold">
+                    Москва, ул. Арбат, д. 1
+                  </span>
+                </li>
+                <li class="contacts__item flex">
+                  <span class="contacts__type font-bold">
+                    почта
+                  </span>
+                  <span class="contacts__value  font-bold">
+                    info@ya.ru
+                  </span>
+                </li>
+              </ul>
+            </address>
+
+            <form class="consult contacts__consult">
+              <div class="font-bold consult__title">
+                Нужна консультация?
+              </div>
+              <div class="flex">
+                <input class="input-default consult__input" type="tel" name="tel">
+
+                <button class="btn-default btn-reset font-bold consult__btn" type="submit">
+                  Заказать звонок
+                </button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
 
     <footer class="footer">
 
@@ -592,8 +628,8 @@
         © Все права защищены 2023
       </span>
     </footer>
+  </div>
 
-  </main>
 </body>
 
 </html>

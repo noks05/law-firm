@@ -38,9 +38,14 @@
   justify-content: flex-end;
 }
 
+.main-wrapper {
+  max-width: var(--section-width);
+  margin-inline: auto;
+  overflow: hidden;
+}
+
 .section {
   padding-block: 80px;
-  overflow: hidden;
 }
 
 .container {

@@ -233,6 +233,7 @@
   background-repeat: no-repeat;
   background-size: 684px;
   background-position: right;
+  background-color: #fff;
 }
 
 .why-us__title {}
@@ -289,7 +290,13 @@
 
 .request-call {}
 
-.specialists {}
+
+
+
+/* specialists */
+.specialists {
+  background-color: #fff;
+}
 
 .specialists__left {
   max-width: 455px;
@@ -480,7 +487,12 @@
 
 .review__position {}
 
-.articles {}
+
+
+/* articles */
+.articles {
+  background-color: #fff;
+}
 
 .content {}
 
@@ -585,9 +597,15 @@
 /* contacts  */
 .contacts {}
 
+.contacts__left:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
 .contacts__right {
   padding: 80px 72px 89px;
-  min-width: 800px;
+  min-width: 760px;
   background: url("../img/bg-footer.jpg"), #2B2A30;
   background-repeat: no-repeat;
   background-size: cover;

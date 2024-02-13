@@ -55,6 +55,7 @@
   --yellow-light: #E3C37A;
   --yellow-dark: #A4834E;
 
+  --section-width: 1440px;
   --container-width: 1300px;
   --padding-x: 15px;
   --input-height: 44px;
@@ -76,6 +77,7 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-family: 'Montserrat', 'Optima', sans-serif;
+  background-color: #1e1e1e;
   color: var(--dark);
 }
 
@@ -108,4 +110,10 @@ figure {
 
 address {
   font-style: normal;
+}
+
+.ymaps-layers-pane {
+  filter: brightness(50%) grayscale(1);
+  -webkit-filter: brightness(50%) grayscale(1);
+  ;
 }
