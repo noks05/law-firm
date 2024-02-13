@@ -71,6 +71,15 @@
   color: var(--yellow-dark);
 }
 
+.more-link {
+  color: var(--yellow-light);
+  transition: color var(--transition-duration-2) ease-in-out;
+}
+
+.more-link:hover {
+  color: var(--yellow-dark);
+}
+
 .btn-reset {
   margin: 0;
   padding: 0;
@@ -80,7 +89,11 @@
 }
 
 .btn-default {
-  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 5px 24px;
   border: var(--border-yellow);
   font-family: 'Optima';
   font-weight: 400;

@@ -1,0 +1,52 @@
+/* heder  */
+@media (max-width: 1024px) {
+  .header__item {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin-inline: auto;
+  }
+
+  .header__item {
+    min-width: 50px;
+    padding: 12px 18px;
+  }
+
+  .header__list {
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 567px) {
+
+  .container {
+    padding-inline: 10px;
+  }
+
+  .head {
+    margin-bottom: 30px;
+  }
+
+  .hero {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+
+  .consult__wrap-input {
+    justify-content: center;
+  }
+
+  .consult__input {
+    max-width: 400px;
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+
+  .header__list {
+    display: none;
+  }
+
+}
