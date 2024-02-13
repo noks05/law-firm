@@ -61,6 +61,7 @@
   --input-height: 44px;
   --border-yellow: 1px solid var(--yellow-light);
   --border-grey: 1px solid var(--grey);
+  --transition-duration-2: .2s;
 
   --font-size-h2: 25px;
   --font-size-light: 11px;

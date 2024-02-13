@@ -7,36 +7,7 @@
   <link rel="stylesheet" href="./src/styles/main.css">
   <script src="//api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU"
     type="text/javascript"></script>
-  <script>
-    ymaps.ready(function () {
-      const map = new ymaps.Map('map', {
-        center: [55.752017, 37.606283],
-        zoom: 14,
-        type: 'yandex#map',
-        controls: []
-      });
-
-      const mark = new ymaps.Placemark(
-        [55.751817, 37.599292],
-        {
-          hintContent: 'Москва, ул. Арбат, д. 1',
-        },
-        {
-          iconLayout: 'default#image',
-          iconImageHref: './src/img/point-map.svg',
-          iconImageSize: [33, 44],
-          iconImageOffset: [-10, -20]
-        }
-      )
-      map.geoObjects.add(mark);
-
-      const mapEl = document.getElementById('map')
-      mapEl.style.height = 'auto'
-      mapEl.style.width = 'auto'
-      mapEl.firstElementChild.style.height = '100%'
-      mapEl.firstElementChild.style.width = '100%'
-    });
-  </script>
+  <script src="./src/scripts/init-map-yandex.js"></script>
   <title>Юридическая фирма</title>
 </head>
 
@@ -88,7 +59,7 @@
             </ul>
           </nav>
 
-          <a class="color-yellow-light" href="tel:79998900998">+7 (999) 890 09 98</a>
+          <a class="address-link" href="tel:79998900998">+7 (999) 890 09 98</a>
         </div>
       </div>
 
@@ -466,9 +437,9 @@
               </h3>
             </div>
 
-            <button class="btn-default btn-reset" type="button">
+            <a class="btn-default btn-reset" href="#">
               Читать больше
-            </button>
+            </a>
           </div>
 
           <ul class="flex">
@@ -481,9 +452,9 @@
                   <h4 class="article__title font-bold">
                     Как использовать закон в свою пользу?
                   </h4>
-                  <button class="btn-default btn-reset" type="button">
+                  <a class="btn-default btn-reset" href="#">
                     Читать
-                  </button>
+                  </a>
                 </div>
               </div>
             </li>
@@ -496,9 +467,9 @@
                   <h4 class="article__title font-bold">
                     библиотека юристов. Что почитать?
                   </h4>
-                  <button class="btn-default btn-reset" type="button">
+                  <a class="btn-default btn-reset" href="#">
                     Читать
-                  </button>
+                  </a>
                 </div>
               </div>
             </li>
@@ -511,9 +482,9 @@
                   <h4 class="article__title font-bold">
                     на что обратить внимание в документах?
                   </h4>
-                  <button class="btn-default btn-reset" type="button">
+                  <a class="btn-default btn-reset" href="#">
                     Читать
-                  </button>
+                  </a>
                 </div>
               </div>
             </li>
@@ -526,9 +497,9 @@
                   <h4 class="article__title font-bold">
                     залог успешных дел наших юристов
                   </h4>
-                  <button class="btn-default btn-reset" type="button">
+                  <a class="btn-default btn-reset" href="#">
                     Читать
-                  </button>
+                  </a>
                 </div>
               </div>
             </li>
@@ -578,25 +549,22 @@
                   <span class="contacts__type font-bold">
                     телефон
                   </span>
-                  <span class="contacts__value  font-bold">
-                    +7 (999) 890 09 98
-                  </span>
+                  <a class="address-link contacts__value address-link font-bold" href="tel:79998900998">+7 (999)
+                    890 09 98</a>
                 </li>
                 <li class="contacts__item flex">
                   <span class="contacts__type font-bold">
                     адрес
                   </span>
-                  <span class="contacts__value  font-bold">
-                    Москва, ул. Арбат, д. 1
-                  </span>
+                  <a class="contacts__value address-link font-bold"
+                    href="https://yandex.ru/maps/213/moscow/?from=api-maps&ll=37.606283%2C55.752017&mode=routes&origin=jsapi_2_0&rtext=~55.751817%2C37.599292&rtt=auto&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DIgoNrWUWQhXcAV9C&z=14">Москва,
+                    ул. Арбат, д. 1</a>
                 </li>
                 <li class="contacts__item flex">
                   <span class="contacts__type font-bold">
                     почта
                   </span>
-                  <span class="contacts__value  font-bold">
-                    info@ya.ru
-                  </span>
+                  <a class="contacts__value address-link font-bold" href="mailto:info@ya.ru">info@ya.ru</a>
                 </li>
               </ul>
             </address>

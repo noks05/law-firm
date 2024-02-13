@@ -47,12 +47,50 @@
 }
 
 .nav__link {
+  position: relative;
   display: inline-block;
   padding-block: 24px;
   font-weight: 300;
   font-size: 14px;
   line-height: 24px;
   color: var(--grey);
+  transition: color var(--transition-duration-2) ease-in-out;
+}
+
+.nav__link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: var(--yellow-light);
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: var(--transition-duration-2);
+  transition-timing-function: ease-in-out;
+  z-index: 1;
+}
+
+.nav__link:hover {
+  color: var(--yellow-light);
+}
+
+.nav__link:hover::before {
+  opacity: 1;
+}
+
+.nav__link:active {
+  color: var(--yellow-light);
+}
+
+.nav__link:active::before {
+  opacity: 1;
+  transform: scaleX(0.5);
+}
+
+.nav__link.disabled {
+  pointer-events: none;
 }
 
 .nav__item:not(:last-child) {
