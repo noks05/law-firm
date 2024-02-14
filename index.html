@@ -9,6 +9,7 @@
   <script src="//api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU"
     type="text/javascript"></script>
   <script src="./src/scripts/init-map-yandex.js"></script>
+  <script src="./src/scripts/hadlers.js" defer></script>
   <title>Юридическая фирма</title>
 </head>
 
@@ -25,7 +26,7 @@
             <img width="44" height="33" src="./src/img/logo-lir.svg" alt="lir logo">
           </div>
 
-          <nav class="nav">
+          <nav class="head__nav nav">
             <ul class="nav__list items-center">
               <li class="nav__item">
                 <a class="nav__link" href="#">
@@ -33,35 +34,42 @@
                 </a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#">
+                <a class="nav__link" href="#why-us">
                   Услуги
                 </a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#">
+                <a class="nav__link" href="#specialists">
                   Сопровождение
                 </a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#">
+                <a class="nav__link" href="#articles">
                   Полезное
                 </a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#">
+                <a class="nav__link" href="#reviews">
                   О компании
                 </a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#">
+                <a class="nav__link" href="#contacts">
                   Контакты
                 </a>
               </li>
             </ul>
           </nav>
 
+
           <a class="address-link" href="tel:79998900998">+7 (999) 890 09 98</a>
+          <a class="address-link address-link_img" href="tel:79998900998"></a>
+          <button class="head__burger-btn btn-reset" type="button">
+            <span class="head__burger-btn_active"></span>
+            <span class="head__burger-btn_close"></span>
+          </button>
         </div>
+
       </div>
 
       <div class="container">
@@ -114,6 +122,41 @@
           </li>
         </ul>
       </div>
+
+      <nav class="burger-menu">
+        <ul class="burger-menu__list">
+          <li class="burger-menu__item">
+            <a class="burger-menu__link" href="#">
+              Главная
+            </a>
+          </li>
+          <li class="burger-menu__item">
+            <a class="burger-menu__link" href="#">
+              Услуги
+            </a>
+          </li>
+          <li class="burger-menu__item">
+            <a class="burger-menu__link" href="#">
+              Сопровождение
+            </a>
+          </li>
+          <li class="burger-menu__item">
+            <a class="burger-menu__link" href="#">
+              Полезное
+            </a>
+          </li>
+          <li class="burger-menu__item">
+            <a class="burger-menu__link" href="#">
+              О компании
+            </a>
+          </li>
+          <li class="burger-menu__item">
+            <a class="burger-menu__link" href="#">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main>
@@ -153,7 +196,7 @@
       </section>
 
 
-      <section class="section why-us">
+      <section class="section why-us" id="why-us">
         <div class="container">
           <h2 class="section-title font-light">
             Наши преимущества
@@ -224,7 +267,7 @@
       </section>
 
 
-      <section class="specialists section">
+      <section class="specialists section" id="specialists">
         <div class="container flex">
           <div class="specialists__left">
             <h2 class="section-title section-title-line font-light specialists__title">
@@ -389,7 +432,7 @@
       </section>
 
 
-      <section class="reviews section">
+      <section class="reviews section" id="reviews">
         <div class="container">
           <h2 class="section-title font-light">
             О нас говорят
@@ -423,7 +466,7 @@
         </div>
       </section>
 
-      <section class="articles section">
+      <section class="articles section" id="articles">
         <div class="container">
           <div class="articles__top items-center content-between">
             <div>
@@ -535,7 +578,7 @@
       </section>
 
 
-      <section class="contacts flex">
+      <section class="contacts flex" id="contacts">
         <div id="map" style="width: 600px; height: 400px; flex-grow:1;">
         </div>
 

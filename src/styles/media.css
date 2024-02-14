@@ -1,7 +1,20 @@
 /* heder  */
 @media (max-width: 1024px) {
+
   .header__item {
     min-width: 200px;
+  }
+
+  .head {
+    padding-block: 10px;
+  }
+
+  .head__burger-btn {
+    display: block;
+  }
+
+  .head__nav {
+    display: none;
   }
 }
 
@@ -35,6 +48,18 @@
     padding-bottom: 40px;
   }
 
+  .header__list {
+    display: none;
+  }
+
+  .address-link {
+    display: none;
+  }
+
+  .address-link_img {
+    display: inline-block;
+  }
+
   .consult__wrap-input {
     justify-content: center;
   }
@@ -45,8 +70,5 @@
     margin-bottom: 12px;
   }
 
-  .header__list {
-    display: none;
-  }
 
 }

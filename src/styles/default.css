@@ -71,6 +71,15 @@
   color: var(--yellow-dark);
 }
 
+.address-link_img {
+  display: none;
+  height: 30px;
+  width: 30px;
+  background-image: url('../img/tel.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .more-link {
   color: var(--yellow-light);
   transition: color var(--transition-duration-2) ease-in-out;

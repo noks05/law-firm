@@ -56,6 +56,7 @@
 }
 
 .head {
+  position: relative;
   border-bottom: 1px solid rgb(177 177 177 / 16%);
   margin-bottom: 65px;
 }
@@ -109,6 +110,119 @@
 
 .nav__item:not(:last-child) {
   margin-right: 34px;
+}
+
+.head__burger-btn {
+  position: relative;
+  display: none;
+  height: 33px;
+  width: 33px;
+  transition: transform .3s ease-in-out;
+  z-index: 10001;
+}
+
+.head__burger-btn.active {
+  transform: rotateY(180deg);
+}
+
+.head__burger-btn_active {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: inline-block;
+  background-image: url('../img/burger.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: opacity .2s ease;
+  opacity: 1;
+  z-index: 1;
+}
+
+.head__burger-btn_close {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: inline-block;
+  background-image: url('../img/burger-close.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: opacity .2s ease;
+  transform: rotateY(180deg);
+  opacity: 0;
+  z-index: -1;
+}
+
+.head__burger-btn.active .head__burger-btn_close {
+  z-index: 1;
+  opacity: 1;
+}
+
+.head__burger-btn.active .head__burger-btn_active {
+  z-index: -1;
+  opacity: 0;
+}
+
+.burger-menu {
+  position: fixed;
+  display: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px;
+  background-color: var(--dark);
+  z-index: 10000;
+}
+
+.burger-menu.active {
+  display: block;
+}
+
+.fade-right-in {
+  animation: var(--animation-fade-forwards) fadeRightIn;
+}
+
+.fade-right-out {
+  animation: var(--animation-fade-forwards) fadeRightOut;
+}
+
+@keyframes fadeRightIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRightOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+.burger-menu__item {
+  margin-bottom: 30px;
+  color: var(--grey);
+}
+
+.burger-menu__item:active {
+  color: var(--yellow-dark);
 }
 
 .telephone {

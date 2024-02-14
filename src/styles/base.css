@@ -62,6 +62,7 @@
   --border-yellow: 1px solid var(--yellow-light);
   --border-grey: 1px solid var(--grey);
   --transition-duration-2: .2s;
+  --animation-fade-forwards: .3s ease-in-out forwards;
 
   --font-size-h2: 25px;
   --font-size-light: 11px;
