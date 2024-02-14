@@ -37,6 +37,7 @@
 }
 
 .section-sub-title {
+  margin-bottom: 40px;
   font-family: 'Optima';
   font-size: 40px;
   font-weight: 400;
@@ -98,7 +99,7 @@
 }
 
 .btn-default {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 44px;
