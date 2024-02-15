@@ -21,8 +21,8 @@
   map.geoObjects.add(mark);
 
   const mapEl = document.getElementById('map')
-  mapEl.style.height = 'auto'
-  mapEl.style.width = 'auto'
-  mapEl.firstElementChild.style.height = '100%'
-  mapEl.firstElementChild.style.width = '100%'
+  mapEl.style.height = String(mapEl.parentElement.style.height)
+  // mapEl.style.width = 'auto'
+  // mapEl.firstElementChild.style.height = '100%'
+  // mapEl.firstElementChild.style.width = '100%'
 }))()

@@ -26,4 +26,13 @@
       burgerMenu.classList.add('active', 'fade-right-in')
     }
   })
+
+  document.querySelectorAll('input[type="email"]').forEach(input => {
+    input.addEventListener('input', (e) => {
+      e.target.value.trim()
+      input.classList.toggle('valid', input.validity.valid)
+      input.classList.toggle('invalid', !input.validity.valid)
+    })
+  }
+  )
 })()

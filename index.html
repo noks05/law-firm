@@ -6,10 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./src/styles/main.css">
   <link rel="stylesheet" href="./src/styles/media.css">
+  <script src="https://unpkg.com/imask"></script>
   <script src="//api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU"
     type="text/javascript"></script>
   <script src="./src/scripts/init-map-yandex.js"></script>
   <script src="./src/scripts/hadlers.js" defer></script>
+  <script src="./src/scripts/masks.js" defer></script>
   <title>Юридическая фирма</title>
 </head>
 
@@ -82,18 +84,22 @@
             Помощь в решении любого правового вопроса в вашу пользу
           </p>
 
-          <form class="consult">
+          <div class="consult">
             <div class="font-bold consult__title">
               Нужна консультация?
             </div>
-            <div class="consult__wrap-input flex-wrap">
-              <input class="input-default consult__input" type="tel" name="tel">
+            <form class="consult__form flex-wrap">
+              <div class="input-default-wrap consult__input-wrap">
+                <input class="input-default consult__input" type="text" name="tel" placeholder="+7(___)___ __ __"
+                  required>
+                <span class="input-valid-marker"></span>
+              </div>
 
               <button class="btn-default btn-reset font-bold consult__btn" type="submit">
                 Заказать звонок
               </button>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
         <ul class="header__list flex">
           <li class="header__item">
@@ -562,81 +568,92 @@
       </section>
 
       <section class="news section flex-col items-center">
-        <h2 class="section-title font-light">
-          Будьте в курсе
-        </h2>
-        <h3 class="section-sub-title">
-          <span class="color-yellow">подпишитесь</span> на наши новости
-        </h3>
-        <p class="news__descr text-descr">
-          Чтобы всегда быть в курсе дел и обновлении законов.
-        </p>
+        <div class="container news__container">
+          <h2 class="section-title font-light">
+            Будьте в курсе
+          </h2>
+          <h3 class="section-sub-title">
+            <span class="color-yellow">подпишитесь</span> на наши новости
+          </h3>
+          <p class="news__descr text-descr">
+            Чтобы всегда быть в курсе дел и обновлении законов.
+          </p>
 
-        <form class="flex">
-          <input class="input-default news__input" type="email" name="email" placeholder="Ваш e-mail">
+          <form class="flex content-center news__form">
+            <div class="input-default-wrap news__input-wrap">
+              <input class="input-default news__input" type="email" name="email" placeholder="Ваш e-mail" required>
+              <span class="input-valid-marker"></span>
+            </div>
 
-          <button class="btn-default btn-reset" type="submit">
-            подписаться
-          </button>
-        </form>
+            <button class="btn-default btn-reset" type="submit">
+              подписаться
+            </button>
+          </form>
+        </div>
 
       </section>
 
 
       <section class="contacts flex" id="contacts">
-        <div id="map" style="width: 600px; height: 400px; flex-grow:1;">
+        <div id="map" style="width: 682px; height: 600px; flex-grow:1;">
         </div>
 
         <div class=" contacts__right">
-          <div class="contacts__inner">
-            <h2 class="section-title section-title-line font-light">
-              На связи с нами
-            </h2>
+          <div class="container">
+            <div class="contacts__inner">
+              <h2 class="section-title section-title-line font-light">
+                На связи с нами
+              </h2>
 
-            <h3 class="section-sub-title contacts__sub-title">
-              <span class="color-yellow-light">Контактная</span> информация
-            </h3>
+              <h3 class="section-sub-title contacts__sub-title">
+                <span class="color-yellow-light">Контактная</span> информация
+              </h3>
 
-            <address>
-              <ul class="contacts__list">
-                <li class="contacts__item flex">
-                  <span class="contacts__type font-bold">
-                    телефон
-                  </span>
-                  <a class="address-link contacts__value address-link font-bold" href="tel:79998900998">+7 (999)
-                    890 09 98</a>
-                </li>
-                <li class="contacts__item flex">
-                  <span class="contacts__type font-bold">
-                    адрес
-                  </span>
-                  <a class="contacts__value address-link font-bold"
-                    href="https://yandex.ru/maps/213/moscow/?from=api-maps&ll=37.606283%2C55.752017&mode=routes&origin=jsapi_2_0&rtext=~55.751817%2C37.599292&rtt=auto&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DIgoNrWUWQhXcAV9C&z=14">Москва,
-                    ул. Арбат, д. 1</a>
-                </li>
-                <li class="contacts__item flex">
-                  <span class="contacts__type font-bold">
-                    почта
-                  </span>
-                  <a class="contacts__value address-link font-bold" href="mailto:info@ya.ru">info@ya.ru</a>
-                </li>
-              </ul>
-            </address>
+              <address>
+                <ul class="contacts__list">
+                  <li class="contacts__item flex">
+                    <span class="contacts__type font-bold">
+                      телефон
+                    </span>
+                    <a class="address-link contacts__value address-link font-bold" href="tel:79998900998">+7 (999)
+                      890 09 98</a>
+                  </li>
+                  <li class="contacts__item flex">
+                    <span class="contacts__type font-bold">
+                      адрес
+                    </span>
+                    <a class="contacts__value address-link font-bold"
+                      href="https://yandex.ru/maps/213/moscow/?from=api-maps&ll=37.606283%2C55.752017&mode=routes&origin=jsapi_2_0&rtext=~55.751817%2C37.599292&rtt=auto&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DIgoNrWUWQhXcAV9C&z=14">Москва,
+                      ул. Арбат, д. 1</a>
+                  </li>
+                  <li class="contacts__item flex">
+                    <span class="contacts__type font-bold">
+                      почта
+                    </span>
+                    <a class="contacts__value address-link font-bold" href="mailto:info@ya.ru">info@ya.ru</a>
+                  </li>
+                </ul>
+              </address>
 
-            <form class="consult">
-              <div class="font-bold consult__title">
-                Нужна консультация?
+              <div class="consult">
+                <div class="font-bold consult__title">
+                  Нужна консультация?
+                </div>
+                <form class="consult__form flex">
+                  <div class="input-default-wrap consult__input-wrap">
+                    <input class="input-default consult__input" type="text" name="tel" placeholder="+7(___)___ __ __"
+                      required>
+                    <span class="input-valid-marker"></span>
+                  </div>
+
+                  <button class="btn-default btn-reset font-bold consult__btn" type="submit">
+                    Заказать звонок
+                  </button>
+                </form>
               </div>
-              <div class="consult__wrap-input flex">
-                <input class="input-default consult__input" type="tel" name="tel">
+            </div>
 
-                <button class="btn-default btn-reset font-bold consult__btn" type="submit">
-                  Заказать звонок
-                </button>
-              </div>
-            </form>
           </div>
-
         </div>
 
       </section>

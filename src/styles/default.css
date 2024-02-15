@@ -56,12 +56,42 @@
 
 
 /* link, button, input  */
+.input-default-wrap {
+  position: relative;
+}
+
 .input-default {
   width: 100%;
   height: var(--input-height);
   padding: 12px;
+  padding-right: 56px;
   border: none;
+  color: var(--dark);
   background-color: #fff;
+}
+
+.input-default:focus {
+  outline: 3px solid var(--yellow-light);
+}
+
+.input-valid-marker {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+}
+
+.input-default.invalid+.input-valid-marker {
+  background-image: url('../img/invalid.svg');
+}
+
+.input-default.valid+.input-valid-marker {
+  background-image: url('../img/valid.svg');
 }
 
 .address-link {
@@ -119,6 +149,10 @@
 .btn-default:hover {
   color: #fff;
   background-color: var(--yellow-light);
+}
+
+.btn-default:focus {
+  outline: 3px solid var(--yellow-dark);
 }
 
 .btn-default:active {
