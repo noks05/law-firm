@@ -415,10 +415,36 @@ why-us__item {
 }
 
 .box {
+  position: relative;
   width: 100%;
   border: 1px solid var(--grey-light);
   padding: 24px 32px;
   text-align: start;
+  overflow: hidden;
+  transition: box-shadow .3s ease-out;
+  z-index: 1;
+}
+
+.box:hover {
+  box-shadow: 0 11px 11px 5px var(--grey);
+}
+
+.box::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: var(--yellow-dark);
+  overflow: hidden;
+  transition: transform .5s ease-out;
+  z-index: -1;
+}
+
+.box:hover::before {
+  transform: scale(200);
 }
 
 .box__img {
@@ -428,6 +454,7 @@ why-us__item {
   background-repeat: no-repeat;
   background-size: auto;
   background-position: left center;
+  transition: background-image var(--transition-duration-2);
 }
 
 .box__img_1 {
@@ -446,9 +473,36 @@ why-us__item {
   background-image: url('../img/book.svg');
 }
 
+.box:hover .box__img_1 {
+  background-image: url('../img/clock-white.svg');
+}
+
+.box:hover .box__img_2 {
+  background-image: url('../img/case-white.svg');
+}
+
+.box:hover .box__img_3 {
+  background-image: url('../img/horse-white.svg');
+}
+
+.box:hover .box__img_4 {
+  background-image: url('../img/book-white.svg');
+}
+
 .box__title {
   margin-bottom: 16px;
+  transition: color var(--transition-duration-2);
 }
+
+.box__descr {
+  transition: color var(--transition-duration-2);
+}
+
+.box:hover .box__title,
+.box:hover .box__descr {
+  color: #fff;
+}
+
 
 
 
@@ -507,14 +561,49 @@ why-us__item {
 
 .specialists__box {
   max-width: 229px;
+  min-width: 229px;
   width: 100%;
 }
 
 .specialists__img {
-  min-height: 312px;
+  position: relative;
   max-height: 312px;
+  min-height: 312px;
+  height: 100%;
   margin-bottom: 24px;
   background-color: var(--yellow-dark);
+  transition: background-color .3s ease-in-out;
+  overflow: hidden;
+}
+
+.specialists__box:hover .specialists__img {
+  background-color: var(--dark);
+}
+
+.specialists__img img {
+  position: absolute;
+  top: 30px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  /* transition: opacity .3s ease-in-out; */
+}
+
+.specialists__img .specialists__img_default {
+  opacity: 1;
+}
+
+.specialists__img .specialists__img_hover {
+  opacity: 0;
+}
+
+.specialists__box:hover .specialists__img_default {
+  opacity: 0;
+}
+
+.specialists__box:hover .specialists__img_hover {
+  opacity: 1;
 }
 
 .specialists__item:nth-child(even) .specialists__img {
