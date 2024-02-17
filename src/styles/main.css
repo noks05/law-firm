@@ -474,6 +474,21 @@ why-us__item {
 .specialists__right {
   overflow: auto;
   max-width: 725px;
+  padding-bottom: 20px;
+}
+
+.specialists__right::-webkit-scrollbar {
+  height: 10px;
+}
+
+.specialists__right::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: var(--grey-lighter);
+}
+
+.specialists__right::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--grey-light);
 }
 
 .specialists__item {
@@ -810,4 +825,98 @@ why-us__item {
   padding: 22px;
   text-align: center;
   background-color: var(--grey-lighter);
+}
+
+
+/* config plagins  */
+.ymaps-layers-pane {
+  filter: brightness(50%) grayscale(1);
+  -webkit-filter: brightness(50%) grayscale(1);
+}
+
+.swiper {
+  width: var(--container-width);
+  height: 470px;
+}
+
+.swiper-pagination-bullet {
+  position: relative;
+  height: 8px;
+  width: 8px;
+  background-color: #fff
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  height: 16px;
+  width: 16px;
+  border: 1px solid var(--yellow-dark);
+  background-color: transparent;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 8px;
+  width: 8px;
+  border-radius: 100%;
+  background-color: var(--yellow-dark);
+  transform: translate(-50%, -50%);
+}
+
+.reviews .swiper-button-next,
+.reviews .swiper-button-prev {
+  height: 48px;
+  width: 48px;
+  border: 1px solid var(--yellow-dark);
+  background-size: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--yellow-dark);
+  transition-property: background color border-color outline-color .2s ease-in-out;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+}
+
+.reviews .swiper-button-prev {
+  background-image: url('../img/prev-arrow.svg');
+}
+
+.reviews .swiper-button-next {
+  background-image: url('../img/next-arrow.svg');
+}
+
+.reviews .review__btn:hover {
+  border-color: var(--yellow-light);
+  background-color: transparent;
+}
+
+.reviews .swiper-button-prev:hover {
+  background-image: url('../img/prev-arrow-black.svg');
+}
+
+.reviews .swiper-button-next:hover {
+  background-image: url('../img/next-arrow-black.svg');
+}
+
+.reviews .review__btn:focus {
+  outline: 3px solid var(--yellow-light);
+}
+
+.reviews .review__btn:active {
+  border-color: var(--yellow-light);
+  background-color: var(--yellow-light);
+  color: #fff;
+}
+
+.reviews .review__btn:disabled {
+  border-color: var(--grey);
+  background-color: var(--grey);
+  color: #fff;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
 }

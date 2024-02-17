@@ -6,10 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./src/styles/main.css">
   <link rel="stylesheet" href="./src/styles/media.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/imask"></script>
   <script src="//api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU"
     type="text/javascript"></script>
   <script src="./src/scripts/init-map-yandex.js"></script>
+  <script src="./src/scripts/init-swiper.js" defer></script>
   <script src="./src/scripts/hadlers.js" defer></script>
   <script src="./src/scripts/masks.js" defer></script>
   <title>Юридическая фирма</title>
@@ -444,6 +447,7 @@
 
 
       <section class="reviews section" id="reviews">
+
         <div class="container">
           <h2 class="section-title font-light">
             О нас говорят
@@ -452,28 +456,96 @@
             <span class="color-yellow">Отзывы</span> наших клиентов
           </h3>
 
-          <div class="review">
-            <div class="review__decor"></div>
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="review">
+                  <div class="review__decor"></div>
 
-            <div class="review__img-wrap flex">
-              <img src="./src/img/avatar.jpg" alt="Аватар">
-            </div>
-            <div class="review__texts flex-col items-center">
-              <p class="review__descr">
-                Я обеспечу представление Ваших интересов в судах общей юрисдикции, арбитраже, третейском суде, приму
-                участие
-                в
-                переговорах, окажу помощь на стадии досудебного урегулирования споров.
-              </p>
+                  <div class="review__img-wrap flex">
+                    <img src="./src/img/avatar.jpg" alt="Аватар">
+                  </div>
+                  <div class="review__texts flex-col items-center">
+                    <p class="review__descr">
+                      Я обеспечу представление Ваших интересов в судах общей юрисдикции, арбитраже, третейском суде,
+                      приму
+                      участие
+                      в
+                      переговорах, окажу помощь на стадии досудебного урегулирования споров.
+                    </p>
 
-              <div class="review__name font-bold">
-                Юлия Воробьева
+                    <div class="review__name font-bold">
+                      Юлия Воробьева
+                    </div>
+                    <span class="font-light">
+                      Директор компании “Воробьева и ко”
+                    </span>
+                  </div>
+                </div>
               </div>
-              <span class="font-light">
-                Директор компании “Воробьева и ко”
-              </span>
+              <div class="swiper-slide">
+                <div class="review">
+                  <div class="review__decor"></div>
+
+                  <div class="review__img-wrap flex">
+                    <img src="./src/img/avatar.jpg" alt="Аватар">
+                  </div>
+                  <div class="review__texts flex-col items-center">
+                    <p class="review__descr">
+                      Я обеспечу представление Ваших интересов в судах общей юрисдикции, арбитраже, третейском суде,
+                      приму
+                      участие
+                      в
+                      переговорах, окажу помощь на стадии досудебного урегулирования споров.
+                    </p>
+
+                    <div class="review__name font-bold">
+                      Юлия Воробьева
+                    </div>
+                    <span class="font-light">
+                      Директор компании “Воробьева и ко”
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="review">
+                  <div class="review__decor"></div>
+
+                  <div class="review__img-wrap flex">
+                    <img src="./src/img/avatar.jpg" alt="Аватар">
+                  </div>
+                  <div class="review__texts flex-col items-center">
+                    <p class="review__descr">
+                      Я обеспечу представление Ваших интересов в судах общей юрисдикции, арбитраже, третейском суде,
+                      приму
+                      участие
+                      в
+                      переговорах, окажу помощь на стадии досудебного урегулирования споров.
+                    </p>
+
+                    <div class="review__name font-bold">
+                      Юлия Воробьева
+                    </div>
+                    <span class="font-light">
+                      Директор компании “Воробьева и ко”
+                    </span>
+                  </div>
+                </div>
+              </div>
+
             </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination items-center content-center"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev review__btn"></div>
+            <div class="swiper-button-next review__btn"></div>
           </div>
+
+
         </div>
       </section>
 

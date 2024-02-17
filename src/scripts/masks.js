@@ -11,7 +11,7 @@
       })
     })
     input.addEventListener('blur', (e) => {
-      const res = mask.unmaskedValue.length === 10
+      const res = mask.masked.isComplete
       input.classList.toggle('invalid', !res)
       input.classList.toggle('valid', res)
 
@@ -19,6 +19,15 @@
         mask.updateOptions({
           lazy: true,
         })
+      }
+    })
+    input.addEventListener('input', () => {
+      const res = mask.masked.isComplete
+      const btn = input.parentElement.nextElementSibling
+      if (!res) {
+        btn.setAttribute('disabled', 'true')
+      } else {
+        btn.removeAttribute('disabled')
       }
     })
   })

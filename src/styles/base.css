@@ -114,9 +114,3 @@ figure {
 address {
   font-style: normal;
 }
-
-.ymaps-layers-pane {
-  filter: brightness(50%) grayscale(1);
-  -webkit-filter: brightness(50%) grayscale(1);
-  ;
-}
