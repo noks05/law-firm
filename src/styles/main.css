@@ -216,12 +216,22 @@
   }
 }
 
-.burger-menu__item {
-  margin-bottom: 30px;
+.burger-menu__link {
+  display: inline-block;
+  padding: 20px;
   color: var(--grey);
+  transition: color var(--transition-duration-2);
 }
 
-.burger-menu__item:active {
+.burger-menu__link:hover {
+  color: var(--yellow-light);
+}
+
+.burger-menu__link:focus-visible {
+  outline: 3px solid var(--yellow-light);
+}
+
+.burger-menu__link:active {
   color: var(--yellow-dark);
 }
 
@@ -990,7 +1000,7 @@ why-us__item {
   background-image: url('../img/next-arrow-black.svg');
 }
 
-.reviews .review__btn:focus {
+.reviews .review__btn:focus-visible {
   outline: 3px solid var(--yellow-light);
 }
 

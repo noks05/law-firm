@@ -451,7 +451,8 @@
 @media (max-width: 567px) {
 
   .news__form {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
   }
 
   .news__input-wrap {
