@@ -364,6 +364,7 @@
   .swiper .swiper-button-prev, .swiper-rtl .swiper-button-next {
     left: 50%;
     right: auto;
+
     transform: translateX(-101%);
   }
 
@@ -464,26 +465,27 @@
 /* contacts  */
 @media (max-width: 1400px) {
 
-  .contacts {
-    flex-wrap: wrap;
-  }
-
   .contacts__right {
     max-width: 100%;
+    padding: 30px;
   }
 
   .contacts__inner {
     max-width: 593px;
     margin-inline: auto;
   }
+
+  .contacts__form {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .contacts__form .consult__input-wrap {
+    margin-bottom: 16px;
+  }
 }
 
-@media (max-width: 768px) {
-
-  .contacts__right {
-    padding-block: 30px;
-    padding-inline: 0;
-  }
+@media (max-width: 1024px) {
 
   .contacts__list {
     column-count: initial;
@@ -492,13 +494,15 @@
   .contacts__item:not(:last-child) {
     margin-bottom: 10px;
   }
+}
 
-  .contacts .consult__form {
-    align-items: start;
+@media (max-width: 768px) {
+  .contacts {
     flex-wrap: wrap;
   }
 
-  .contacts .consult__input-wrap {
-    margin-bottom: 16px;
+  .contacts__inne .contacts .consult__form {
+    align-items: start;
+    flex-wrap: wrap;
   }
 }

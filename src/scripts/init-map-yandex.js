@@ -22,7 +22,13 @@
 
   const mapEl = document.getElementById('map')
   mapEl.style.height = String(mapEl.parentElement.style.height)
-  // mapEl.style.width = 'auto'
-  // mapEl.firstElementChild.style.height = '100%'
+  mapEl.style.height = 'auto'
+  mapEl.firstElementChild.style.height = '100%'
+  mapEl.firstElementChild.style.maxHeight = '650px'
   mapEl.firstElementChild.style.width = '100%'
+
+  const mediaQuery = window.matchMedia('(max-width: 768px)')
+  if (mediaQuery.matches) {
+    mapEl.style.height = '400px'
+  }
 }))()
