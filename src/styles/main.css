@@ -848,7 +848,7 @@ why-us__item {
 
 .news__input::placeholder {
   font-size: 14px;
-  color: var(--grey);
+  color: var(--grey-lighter);
 }
 
 
@@ -924,8 +924,9 @@ why-us__item {
 }
 
 .swiper {
-  width: var(--container-width);
-  height: 470px;
+  width: 100%;
+  max-width: var(--container-width);
+  min-height: 470px;
 }
 
 .swiper-pagination-bullet {

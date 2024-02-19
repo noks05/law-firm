@@ -24,5 +24,5 @@
   mapEl.style.height = String(mapEl.parentElement.style.height)
   // mapEl.style.width = 'auto'
   // mapEl.firstElementChild.style.height = '100%'
-  // mapEl.firstElementChild.style.width = '100%'
+  mapEl.firstElementChild.style.width = '100%'
 }))()

@@ -123,7 +123,8 @@
   }
 
   .header .consult__form {
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .header .consult__input-wrap {
@@ -354,6 +355,28 @@
   .review__texts::after {
     width: 25px;
     top: -10px;
+  }
+
+  .swiper .swiper-slide {
+    padding-bottom: 130px;
+  }
+
+  .swiper .swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: 50%;
+    right: auto;
+    transform: translateX(-101%);
+  }
+
+  .swiper .swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: 50%;
+    left: auto;
+    transform: translateX(101%);
+  }
+
+  .reviews .swiper .swiper-button-next,
+  .reviews .swiper .swiper-button-prev {
+    bottom: 50px;
+    top: auto;
   }
 }
 

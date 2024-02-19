@@ -151,7 +151,7 @@
   background-color: var(--yellow-light);
 }
 
-.btn-default:focus {
+.btn-default:focus-visible {
   outline: 3px solid var(--yellow-dark);
 }
 
