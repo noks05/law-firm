@@ -507,3 +507,21 @@
     flex-wrap: wrap;
   }
 }
+
+
+
+/* modal offer-call  */
+@media (max-width: 576px) {
+
+  .modal.offer-call .modal__content {
+    padding: 15px;
+  }
+
+  .modal.offer-call .modal__inner {
+    padding: 40px 15px;
+  }
+
+  .modal.offer-call .section-sub-title {
+    font-size: 20px;
+  }
+}

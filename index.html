@@ -4,17 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./src/styles/main.css">
-  <link rel="stylesheet" href="./src/styles/media.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/imask"></script>
   <script src="//api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU"
     type="text/javascript"></script>
   <script src="./src/scripts/init-map-yandex.js"></script>
   <script src="./src/scripts/init-swiper.js" defer></script>
+  <script src="./src/scripts/modal.js" defer></script>
   <script src="./src/scripts/handlers.js" defer></script>
-  <script src="./src/scripts/masks.js" defer></script>
+  <script src="./src/scripts/validation.js" defer></script>
+  <link rel="stylesheet" href="./src/styles/main.css">
+  <link rel="stylesheet" href="./src/styles/media.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <title>Юридическая фирма</title>
 </head>
 
@@ -272,7 +273,7 @@
             </li>
           </ul>
 
-          <button class="btn-default btn-reset" type="button">
+          <button class="btn-default btn-reset" id="offer-call" data-role="btn-active-modal" type="button">
             Заказать звонок
           </button>
         </div>
@@ -297,7 +298,7 @@
               переговорах.
             </p>
 
-            <button class="btn-reset btn-default" type="button">
+            <button class="btn-reset btn-default" id="offer-call" data-role="btn-active-modal" type="button">
               Заказать звонок
             </button>
           </div>
@@ -742,12 +743,62 @@
     </main>
 
     <footer class="footer">
-
-
       <span class="footer__bottom">
         © Все права защищены 2023
       </span>
     </footer>
+
+    <div class="modal offer-call"> <!-- modal offer call-->
+      <div class="modal__wrapper">
+        <div class="modal__box">
+          <button class="modal__close btn-reset" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 21 21">
+              <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                d="m15.5 15.5l-10-10zm0-10l-10 10"></path>
+            </svg>
+          </button>
+
+          <div class="modal__content">
+
+            <div class="modal__inner">
+              <div class="modal__title section-sub-title">
+                <div>Оставьте заявку</div>
+                <span class="color-yellow">мы с вами свяжемся</span>
+              </div>
+
+              <form class="offer-call__form" id="offer-call" name="offerCall" method="POST">
+
+                <div class="offer-call__input-wrap">
+                  <input class="input-default" name="name" type="text" placeholder="Ваше имя">
+                  <span class="input-valid-marker"></span>
+                  <span class="offer-call__error-message"></span>
+                </div>
+                <div class="offer-call__input-wrap">
+                  <input class="input-default" name="tel" type="tel" placeholder="Телефон">
+                  <span class="input-valid-marker"></span>
+                  <span class="offer-call__error-message"></span>
+                </div>
+                <div class="offer-call__input-wrap">
+                  <input class="input-default" name="email" type="email" placeholder="Ваш e-mail">
+                  <span class="input-valid-marker"></span>
+                  <span class="offer-call__error-message"></span>
+                </div>
+
+
+                <button class="btn-default btn-reset font-bold modal__ok" type="submit" disabled>
+                  Заказать
+                </button>
+
+              </form>
+            </div>
+
+          </div> <!--content-offer-call -->
+
+        </div>
+      </div>
+    </div><!-- modal offer call-->
+
+
   </div>
 
 </body>

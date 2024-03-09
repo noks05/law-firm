@@ -1,0 +1,58 @@
+/* *******************  fade  ************************ */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn .2s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  animation: fadeOut .2s ease-in-out forwards;
+}
+
+
+/* *******************  scale  ************************ */
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.scaleIn {
+  animation: scaleIn .2s ease-in-out forwards;
+}
+
+@keyframes scaleOut {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+.scaleOut {
+  animation: scaleOut .2s ease-in-out forwards;
+}

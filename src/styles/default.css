@@ -58,6 +58,7 @@
 /* link, button, input  */
 .input-default-wrap {
   position: relative;
+  width: 100%;
 }
 
 .input-default {

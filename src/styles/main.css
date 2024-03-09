@@ -1,6 +1,7 @@
 @import './normalize.css';
 @import './base.css';
 @import './default.css';
+@import './animation.css';
 
 
 /* glop  */
@@ -1019,4 +1020,101 @@ why-us__item {
 .swiper-button-prev::after,
 .swiper-button-next::after {
   display: none;
+}
+
+
+
+
+/* modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 1000000;
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal__wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  padding-top: 50px;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+}
+
+.modal__box {
+  position: relative;
+  margin-inline: auto;
+  padding-top: 48px;
+}
+
+.modal__content {
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.modal__close {
+  position: absolute;
+  top: 8px;
+  right: 2px;
+  height: 30px;
+  width: 30px;
+  transition: transform var(--transition-duration-2);
+}
+
+.modal__close:hover {
+  transform: rotateZ(90deg);
+}
+
+/* modal.offer-call */
+.modal.offer-call .modal__box {
+  max-width: 963px;
+}
+
+.modal.offer-call .modal__content {
+  padding: 24px;
+}
+
+.modal.offer-call .modal__inner {
+  border: var(--border-yellow);
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.modal.offer-call .modal__ok {
+  margin-top: 40px;
+}
+
+.offer-call__form {
+  max-width: 534px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.offer-call__input-wrap {
+  position: relative;
+}
+
+.offer-call__input-wrap input {
+  border: var(--border-grey);
+}
+
+.offer-call__input-wrap .input-valid-marker {
+  top: 22px;
+}
+
+.offer-call__input-wrap:not(:first-child) {
+  margin-top: 24px;
+}
+
+.offer-call__error-message {
+  display: block;
+  text-align: start;
+  font-size: 14px;
+  color: red;
 }
