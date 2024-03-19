@@ -603,18 +603,23 @@ why-us__item {
 
 .specialists__img .specialists__img_default {
   opacity: 1;
+  transition: opacity .3s ease-in-out;
 }
 
 .specialists__img .specialists__img_hover {
   opacity: 0;
+  transition: opacity .3s ease-in-out, transform .3s ease-in-out;
 }
 
 .specialists__box:hover .specialists__img_default {
   opacity: 0;
+  transition: opacity .3s ease-in-out;
 }
 
 .specialists__box:hover .specialists__img_hover {
+  transform: scale(1.1);
   opacity: 1;
+  transition: opacity .3s ease-in-out, transform .3s ease-in-out;
 }
 
 .specialists__item:nth-child(even) .specialists__img {
